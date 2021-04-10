@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Georgia, serif;
+    width: 100vw;
+}
+
+h2 {
+    margin-bottom: 10vh;
+}
+
+header {
+    font-size: 5rem;
+    margin-bottom: 10vh;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    padding: 0 3px;
+}
+
+main {
+    padding: 20px 0;
+}
+
+.vehicle_dropdown_boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.auto_selector {
+    padding: 0 5px;
+    margin: 3px 0;
+    border-radius: 1px;
+    height: 35px;
+    border: 2px solid black;
+    width: 80vw;
+    font-weight: bold;
+}
+
+.sortBy {
+    margin: 10px 0;
+}
+
+input[type='radio'] {
+     transform: scale(2); 
+     margin: 0 7px 0 10px;
+}
+
+.sortBy__button {
+    margin-left: 15px;
+}
+
+.no_items_message {
+    margin: 20px 0;
+}
+
+.table_body {
+    max-height: 200px;
+    overflow-y: scroll;
+    overflow-x: visible;
+    
+}
+
+footer{
+    margin-top: 10vh;
+}
+
+td {
+    font-size: 0.6rem;
+}
+
+.register_link{
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 280px) {
+    header {
+      font-size: 2rem;
+    }
+  }
+
+@media only screen and (min-width: 400px) {
+    html, td {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media only screen and (min-width: 540px) {
+    html, td {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    html, td {
+        font-size: 0.9rem;
+        border: 0;
+    }
+
+    .auto_selector {
+        width: 30vw;
+    }
+
+    .table_body {
+        max-height: 400px;
+        
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .table-body {
+        margin-left: 25vw;
+        margin-right: 25vw;
+    }
+}
