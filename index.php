@@ -4,7 +4,7 @@
     $path = '/';
     session_set_cookie_params($lifetime, $path);
     session_start();
-
+    
     require('model/database.php');
     require('model/vehicles_db.php');
     require('model/makes_db.php');
@@ -19,9 +19,8 @@
     $types = get_types();
     $classes = get_classes();
 
-    
-
     $vehicles = list_vehicles($make_id, $sort_by, $type_id, $class_id);
+
     $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 
     switch($action) {

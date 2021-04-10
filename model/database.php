@@ -7,11 +7,5 @@
     try {
         $db = new PDO($dsn, $username, $password);
     } catch(PDOException $e) {
-        echo $e;
+        echo $e->getMessage();
     }
-
-        try {
-            $db = new PDO($dsn, $username, $password);
-        } catch(PDOException $e) {
-            echo $e;
-        }

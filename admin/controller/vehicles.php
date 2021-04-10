@@ -14,10 +14,18 @@
             $count = get_vehicle_count();
             include('view/add_vehicle.php');
             break;
+        case 'delete_vehicle':
+            $page = 'default';
+            $vehicle_id = filter_input(INPUT_POST, 'vehicle_id', FILTER_VALIDATE_INT);
+            delete_vehicle($vehicle_id);
+            $count = get_vehicle_count();
+            $action = 'deleted_vehicle';
+            include('controller/vehicles.php');
+            break;
         default:
             $page = 'default';
             $vehicles = list_vehicles($make_id, $sort_by, $type_id, $class_id);
             include('view/vehicle_list.php');
             break;
-}
+    }
 
